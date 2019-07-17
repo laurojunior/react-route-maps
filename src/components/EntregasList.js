@@ -73,13 +73,13 @@ class EntregasList extends Component {
                                                             <td>{entrega.ponto_destino}</td>                               
                                                             <td>
                                                             <Link 
-                                                            className='btn btn-default btn-xs' 
+                                                            className='btn btn-default btn-primary btn-xs' 
                                                             to={`/entrega/${entrega.id}`}
                                                         >
                                                             Editar
                                                         </Link>
                                                             <Link 
-                                                            className='btn btn-default btn-xs' 
+                                                            className='btn btn-default btn-primary btn-xs' 
                                                             to={`/rota/${entrega.id}`}
                                                         >
                                                             Rota
