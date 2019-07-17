@@ -50,6 +50,7 @@ class CalcularRota extends Component {
       }
     });
     directionsDisplay.setMap(map);
+    document.getElementById('map').setAttribute("style","height:500px");
   }
 
  
@@ -59,7 +60,7 @@ class CalcularRota extends Component {
         <div className='row justify-content-center'>
           <div className='col-md-12'>
             <div className='card'>
-              <div className='card-header'>Create new entrega</div>
+              <div className='card-header'>Calculo de Rota</div>
               <div className='card-body'>
                 <form onSubmit={this.onSubmit}>
                   <div className='form-group'>
@@ -106,7 +107,7 @@ class CalcularRota extends Component {
                       disabled
                     />
                   </div>                  
-                  <button type="button" onClick={ () => this.props.history.goBack()} className='btn btn-default'>Cancelar</button>
+                  <button type="button" onClick={ () => this.props.history.goBack()} className='btn btn-default'>Voltar</button>
                   <button type="button" onClick={ () => this.initMap(this)} className='btn btn-default'>Gerar Rota</button>
                 </form>
                 <div id="map"></div>
