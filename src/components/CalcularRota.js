@@ -31,8 +31,8 @@ class CalcularRota extends Component {
   
     // Função para deletar um entrega
   initMap (e) {
-   var directionsService = new google.maps.DirectionsService
-   var directionsDisplay = new google.maps.DirectionsRenderer
+   var directionsService = google.maps.DirectionsService
+   var directionsDisplay = google.maps.DirectionsRenderer
     console.log('map initialized');
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 7,
