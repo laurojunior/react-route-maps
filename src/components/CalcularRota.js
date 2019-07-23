@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 import api from '../api'
 import { withRouter } from 'react-router-dom'
 const google=window.google
-   var directionsDisplay,
-    directionsService,
-    map;
+var directionsService = new google.maps.DirectionsService;
+var directionsDisplay = new google.maps.DirectionsRenderer;
  
 class CalcularRota extends Component {
   constructor (props) {
@@ -35,9 +34,7 @@ class CalcularRota extends Component {
     // Função para deletar um entrega
   initMap (e) {
     console.log('map initialized');
-    directionsService = new google.maps.DirectionsService();
-    directionsDisplay = new google.maps.DirectionsRenderer();
-    map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 7,
       center: {lat: 41.85, lng: -87.65}
     });
